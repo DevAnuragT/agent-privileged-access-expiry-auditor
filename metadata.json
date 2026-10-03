@@ -1,0 +1,29 @@
+{
+  "slug": "privileged-access-expiry-auditor",
+  "title": "Privileged Access Expiry Auditor",
+  "category": "cybersecurity",
+  "description": "Find privileged grants without approver, business reason, or near-term expiry.",
+  "fields": {
+    "access_grants": {
+      "label": "access grants",
+      "kind": "list",
+      "minimum": 1
+    },
+    "approvers": {
+      "label": "approvers",
+      "kind": "list",
+      "minimum": 1
+    },
+    "business_reasons": {
+      "label": "business reasons",
+      "kind": "list",
+      "minimum": 1
+    },
+    "expiry_dates": {
+      "label": "expiry dates",
+      "kind": "list",
+      "minimum": 1
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: privileged-access-expiry-auditor
+version: 0.1.0
+description: Find privileged grants without approver, business reason, or near-term expiry.
+skills:
+  - privileged-access-expiry-auditor-skill
+tools:
+  - review-privileged-access-expiry-auditor
+tags:
+  - cybersecurity
+  - evidence-driven

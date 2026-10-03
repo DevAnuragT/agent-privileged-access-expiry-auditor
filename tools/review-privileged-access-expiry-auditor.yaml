@@ -1,0 +1,59 @@
+{
+  "name": "review-privileged-access-expiry-auditor",
+  "description": "Run Privileged Access Expiry Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "access_grants": {
+            "type": "array",
+            "description": "access grants"
+          },
+          "approvers": {
+            "type": "array",
+            "description": "approvers"
+          },
+          "business_reasons": {
+            "type": "array",
+            "description": "business reasons"
+          },
+          "expiry_dates": {
+            "type": "array",
+            "description": "expiry dates"
+          }
+        },
+        "required": [
+          "access_grants",
+          "approvers",
+          "business_reasons",
+          "expiry_dates"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-privileged-access-expiry-auditor.py",
+    "runtime": "python3"
+  }
+}
